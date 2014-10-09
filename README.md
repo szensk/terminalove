@@ -36,6 +36,7 @@ end
 
 Shortcuts
 =========
+```
 Scroll wheel: scroll up or down
 Shift+Left/Right: Select characters
 Ctrl+A: Select entire line
@@ -48,4 +49,4 @@ Tab: Complete current suggestion
 Ctrl+Left/Right: Move to First/Last Command
 Enter: Run command as MoonScript
 Shift+Enter: Run command as Lua
-
+```
