@@ -122,6 +122,7 @@ terminal = {
   x: 0
   y: 0
   ps: '> '
+  activation: 'f12'
   width:  500
   height: 250
   textin: ""
@@ -311,7 +312,7 @@ terminal = {
           redraw = true
 
   keypressed: (key, rep) =>
-    if key == 'f12'
+    if key == @activation
       @visible = not @visible
       @focus = not @focus
       blink, lasttime = 1, 0
@@ -412,7 +413,8 @@ terminal = {
 }
 
 setmetatable(terminal, {
-  __call: (width, height, index) =>
+  __call: (activation, width, height, index) =>
+    @activation = activation or @activation
     @resize(width, height)
     @index = index
     @addWords(index)

@@ -166,6 +166,7 @@ terminal = {
   x = 0,
   y = 0,
   ps = '> ',
+  activation = 'f12',
   width = 500,
   height = 250,
   textin = "",
@@ -407,7 +408,7 @@ terminal = {
     end
   end,
   keypressed = function(self, key, rep)
-    if key == 'f12' then
+    if key == self.activation then
       self.visible = not self.visible
       self.focus = not self.focus
       blink, lasttime = 1, 0
@@ -535,7 +536,8 @@ terminal = {
   end
 }
 return setmetatable(terminal, {
-  __call = function(self, width, height, index)
+  __call = function(self, activation, width, height, index)
+    self.activation = activation or self.activation
     self:resize(width, height)
     self.index = index
     self:addWords(index)
