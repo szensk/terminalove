@@ -539,6 +539,7 @@ return setmetatable(terminal, {
     self:resize(width, height)
     self.index = index
     self:addWords(index)
+    self:addWords(getSandbox())
     return self
   end
 })

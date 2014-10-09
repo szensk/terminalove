@@ -416,5 +416,6 @@ setmetatable(terminal, {
     @resize(width, height)
     @index = index
     @addWords(index)
+    @addWords(getSandbox!)
     return @
 })
