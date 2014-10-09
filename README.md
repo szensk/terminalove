@@ -1,6 +1,8 @@
 terminalove
 ===========
-A simple console for the [LÖVE](https://love2d.org/) (version 0.9.0) game engine. It uses MoonScript, because Lua is too verbose for an in-game console (ala Quake).
+A simple console for the [LÖVE](https://love2d.org/) (version >= 0.9.0) game engine. It uses [MoonScript](https://moonscript.org), because Lua is, in my experience, too verbose for an in-game console (ala Quake).
+
+![alt text](https://i.imgur.com/4hCMXZ0.png "example usage")
 
 Usage
 =====
