@@ -11,8 +11,8 @@ local terminal = require 'terminal'
 
 function love.load()
     love.graphics.setBackgroundColor(63, 63, 63)
-    --Width, Height, and the execution environment
-    terminal(500, 250, _G)
+    --Activation Key, Width, Height, and the execution environment
+    terminal('f12', 500, 250, _G)
     --If you don't want typing to be painful
     love.keyboard.setKeyRepeat(true)
 end
